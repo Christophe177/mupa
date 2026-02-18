@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-slate-100 transition-colors duration-300;
+    font-family: 'Inter', sans-serif;
+    background-color: #020617;
+  }
+
+  /* Ensure text is readable on this dark background */
+  body,
+  .dark body {
+    background-color: #020617;
+    color: #f8fafc;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
