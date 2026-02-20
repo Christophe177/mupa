@@ -4,7 +4,7 @@ import { ArrowRight, Download } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+        <section id="home" className="relative min-h-screen md:h-screen py-20 md:py-0 flex items-center justify-center overflow-hidden">
             {/* Background Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
@@ -23,7 +23,7 @@ const Hero = () => {
                     transition={{ duration: 0.8 }}
                     className="mb-8 flex justify-center"
                 >
-                    <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full p-1 bg-gradient-to-tr from-cyan-400 to-blue-600 shadow-2xl">
+                    <div className="relative w-36 h-36 sm:w-48 md:w-56 sm:h-48 md:h-56 rounded-full p-1 bg-gradient-to-tr from-cyan-400 to-blue-600 shadow-2xl">
                         <img
                             src="/patrick-profile.jpg"
                             alt="MUHIRE Patrick"
@@ -40,11 +40,11 @@ const Hero = () => {
                     <h2 className="text-xl md:text-2xl font-light tracking-wider mb-4 text-cyan-400">
                         HELLO, I'M
                     </h2>
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6">
+                    <h1 className="text-4xl xs:text-5xl md:text-7xl font-bold mb-4 md:mb-6">
                         <span className="text-white">MUHIRE </span>
                         <span className="text-cyan-500">PATRICK</span>
                     </h1>
-                    <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto font-light">
+                    <p className="text-lg md:text-2xl text-gray-300 mb-6 md:mb-8 max-w-2xl mx-auto font-light">
                         Creative Multimedia Specialist
                         <span className="block mt-2 text-lg text-gray-400">
                             Photography • Videography • Graphic Design • Motion Graphics
