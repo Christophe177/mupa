@@ -4,7 +4,7 @@ import { ArrowRight, Download } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section id="home" className="relative min-h-[100dvh] py-12 md:py-0 flex items-center justify-center overflow-hidden">
+        <section id="home" className="relative min-h-screen py-12 md:py-0 flex items-center justify-center overflow-hidden">
             {/* Background Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
@@ -23,7 +23,7 @@ const Hero = () => {
                     transition={{ duration: 0.8 }}
                     className="mb-8 flex justify-center"
                 >
-                    <div className="relative w-36 h-36 sm:w-48 md:w-56 sm:h-48 md:h-56 rounded-full p-1 bg-gradient-to-tr from-cyan-400 to-blue-600 shadow-2xl">
+                    <div className="relative w-32 h-32 xs:w-36 xs:h-36 sm:w-48 md:w-56 sm:h-48 md:h-56 rounded-full p-1 bg-gradient-to-tr from-cyan-400 to-blue-600 shadow-2xl">
                         <img
                             src="/patrick-profile.jpg"
                             alt="MUHIRE Patrick"
@@ -33,9 +33,9 @@ const Hero = () => {
                 </motion.div>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
                 >
                     <h2 className="text-xl md:text-2xl font-light tracking-wider mb-4 text-cyan-400">
                         HELLO, I'M
@@ -72,7 +72,7 @@ const Hero = () => {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 1, duration: 1 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
                 className="absolute bottom-10 left-1/2 transform -translate-x-1/2 hidden tall:block"
             >
                 <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-2">

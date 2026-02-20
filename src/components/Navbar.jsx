@@ -26,7 +26,9 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/50 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-4'}`}>
+        <nav className={`fixed w-full z-[100] transition-all duration-300 ${isScrolled ? 'bg-black/80 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-4'}`}>
+            {/* Contrast Shield for Mobile - ensures menu is visible on bright backgrounds */}
+            <div className={`absolute inset-0 md:hidden bg-gradient-to-b from-black/40 to-transparent pointer-events-none h-24 -top-0 transition-opacity duration-300 ${isScrolled ? 'opacity-0' : 'opacity-100'}`} />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
