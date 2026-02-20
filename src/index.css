@@ -47,4 +47,13 @@
       background-position: 0% 50%;
     }
   }
+
+  /* Force Android Parity: Fixed Visibility */
+  nav,
+  .fixed {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
 }
