@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Moon, Sun } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { createPortal } from 'react-dom';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -25,8 +26,8 @@ const Navbar = () => {
         { name: 'Contact', href: '/#contact' },
     ];
 
-    return (
-        <nav className={`fixed top-0 left-0 w-full z-[9999] ${isScrolled ? 'bg-black/95 shadow-lg py-2' : 'bg-black/40 md:bg-transparent py-4'}`}>
+    return createPortal(
+        <nav className={`fixed top-0 left-0 w-full z-[10000] ${isScrolled ? 'bg-black/95 shadow-lg py-2' : 'bg-black/80 md:bg-transparent py-4'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
@@ -83,7 +84,8 @@ const Navbar = () => {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </nav>
+        </nav>,
+        document.body
     );
 };
 
