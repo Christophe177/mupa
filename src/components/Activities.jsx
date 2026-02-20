@@ -1,71 +1,62 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Award, Briefcase, MapPin } from 'lucide-react';
+import { Calendar, Award, Briefcase, MapPin, Video, PenTool } from 'lucide-react';
 
 const Activities = () => {
     const activities = [
         {
-            id: 0,
-            type: 'experience',
-            title: 'Lead Creative Director',
-            organization: 'International Media Group',
-            date: '2025 - Future',
-            description: 'Overseeing global multimedia strategy and pioneering AI-driven visual storytelling.',
-            icon: <Briefcase size={20} />,
-        },
-        {
-            id: 0.5,
-            type: 'experience',
-            title: 'Lead Multimedia Production',
-            organization: 'Regional Tech Hub',
-            date: '2024',
-            description: 'Directed large-scale digital content production and managed cross-functional creative teams.',
-            icon: <Briefcase size={20} />,
-        },
-        {
             id: 1,
             type: 'experience',
-            title: 'Senior Multimedia Specialist',
-            organization: 'Creative Agency XYZ',
-            date: '2023 - Present',
-            description: 'Leading a team of creatives to deliver high-impact multimedia campaigns for global brands.',
+            title: 'Content Creation',
+            organization: 'Marchal Real Estate',
+            date: '2024 - 2025',
+            description: 'Leading video production and content creation for real estate marketing.',
             icon: <Briefcase size={20} />,
         },
         {
             id: 2,
-            type: 'award',
-            title: 'Best Cinematography',
-            organization: 'National Film Festival',
-            date: 'Nov 2023',
-            description: 'Awarded for exceptional visual storytelling in the short film category.',
-            icon: <Award size={20} />,
+            type: 'experience',
+            title: 'Animator',
+            organization: 'Rwanda Basic Education Board (REB)',
+            date: '2024',
+            description: 'Designing and animating educational content for national curriculum support.',
+            icon: <PenTool size={20} />,
         },
         {
             id: 3,
-            type: 'workshop',
-            title: 'Advanced Motion Graphics Workshop',
-            organization: 'Design Institute',
-            date: 'Aug 2023',
-            description: 'Intensive 2-week workshop focusing on 3D integration in After Effects.',
-            icon: <Calendar size={20} />,
+            type: 'experience',
+            title: 'Documentary Films Editor',
+            organization: 'Document Africa Film Production Ltd',
+            date: '2023',
+            description: 'Professional editing of documentary films focusing on African narratives.',
+            icon: <Video size={20} />,
         },
         {
             id: 4,
-            type: 'experience',
-            title: 'Freelance Photographer',
-            organization: 'Self-Employed',
-            date: '2020 - 2023',
-            description: 'Provided photography services for weddings, events, and corporate portraits.',
-            icon: <Briefcase size={20} />,
+            type: 'award',
+            title: 'Best Short Documentary Film',
+            organization: 'Imitana Production & Kiruri MFN',
+            date: '2023',
+            description: 'Won the prestigious award during the filmmaking boot camp.',
+            icon: <Award size={20} />,
         },
         {
             id: 5,
-            type: 'event',
-            title: 'Tech Summit 2022 Coverage',
-            organization: 'TechDaily',
-            date: 'May 2022',
-            description: 'Official media partner covering keynotes and interviews.',
-            icon: <MapPin size={20} />,
+            type: 'experience',
+            title: 'Jingles and Graphic Designs',
+            organization: 'Isangano Radio 104.9FM',
+            date: '2022 - 2023',
+            description: 'Audio production for jingles and visual graphic design for radio branding.',
+            icon: <Briefcase size={20} />,
+        },
+        {
+            id: 6,
+            type: 'experience',
+            title: 'Commercial Ads',
+            organization: 'MOPAS',
+            date: '2022',
+            description: 'Conceptualizing and producing high-converting commercial advertisements.',
+            icon: <Video size={20} />,
         },
     ];
 
@@ -73,10 +64,10 @@ const Activities = () => {
         <section id="activities" className="py-20 backdrop-blur-sm text-slate-100 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: true, margin: "-100px" }}
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-bold mb-4">Experience & Activities</h2>
@@ -94,10 +85,14 @@ const Activities = () => {
                         {activities.map((item, index) => (
                             <motion.div
                                 key={item.id}
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                viewport={{ once: true }}
+                                initial={{
+                                    opacity: 0,
+                                    y: 50,
+                                    x: index % 2 === 0 ? 50 : -50
+                                }}
+                                whileInView={{ opacity: 1, y: 0, x: 0 }}
+                                transition={{ duration: 0.7, delay: index * 0.1, ease: "easeOut" }}
+                                viewport={{ once: true, margin: "-50px" }}
                                 className={`flex flex-col md:flex-row items-center justify-between ${index % 2 === 0 ? 'md:flex-row-reverse' : ''
                                     }`}
                             >

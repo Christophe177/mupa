@@ -7,12 +7,13 @@ const Hero = () => {
         <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
             {/* Background Overlay */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 to-slate-800/90 z-10" />
                 <img
-                    src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                    alt="Background"
-                    className="w-full h-full object-cover opacity-50"
+                    src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop&v=9"
+                    alt="Professional Production Studio"
+                    className="w-full h-full object-cover scale-105 animate-slow-zoom brightness-125 contrast-110"
                 />
+                <div className="absolute inset-0 bg-slate-900/40 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-purple-500/10 z-20" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
@@ -49,7 +50,6 @@ const Hero = () => {
                             Photography • Videography • Graphic Design • Motion Graphics
                         </span>
                     </p>
-
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <a
                             href="/#projects"

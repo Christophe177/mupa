@@ -166,10 +166,10 @@ const Projects = () => {
         <section id="projects" className="py-20 backdrop-blur-sm text-slate-100 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: true, margin: "-100px" }}
                     className="text-center mb-12"
                 >
                     <h2 className="text-3xl md:text-5xl font-bold mb-4">Featured Projects</h2>
@@ -200,10 +200,11 @@ const Projects = () => {
                         {filteredProjects.map((project) => (
                             <motion.div
                                 layout
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0.9 }}
-                                transition={{ duration: 0.3 }}
+                                initial={{ opacity: 0, scale: 0.8, y: 50 }}
+                                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                exit={{ opacity: 0, scale: 0.8 }}
+                                transition={{ duration: 0.5, ease: "easeOut" }}
+                                viewport={{ once: true, margin: "-50px" }}
                                 key={project.id}
                                 className="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer"
                                 onClick={() => setSelectedProject(project)}

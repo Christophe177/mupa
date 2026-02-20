@@ -16,10 +16,10 @@ const About = () => {
         <section id="about" className="py-20 backdrop-blur-sm text-slate-100 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: true, margin: "-100px" }}
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-bold mb-4">About Me</h2>
@@ -28,10 +28,10 @@ const About = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        viewport={{ once: true }}
+                        initial={{ opacity: 0, x: -100, scale: 0.9 }}
+                        whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                        viewport={{ once: true, margin: "-50px" }}
                     >
                         <h3 className="text-3xl font-bold mb-6">I'm a Multimedia Specialist</h3>
                         <p className="text-xl text-gray-300 mb-6 leading-relaxed">
@@ -63,10 +63,10 @@ const About = () => {
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
-                        viewport={{ once: true }}
+                        initial={{ opacity: 0, x: 100, scale: 0.9 }}
+                        whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                        transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                        viewport={{ once: true, margin: "-50px" }}
                         className="grid grid-cols-1 gap-6"
                     >
                         <h3 className="text-xl font-semibold mb-2">My Skills</h3>

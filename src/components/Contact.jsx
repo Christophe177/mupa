@@ -42,10 +42,10 @@ const Contact = () => {
         <section id="contact" className="py-20 backdrop-blur-sm text-slate-100 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: true, margin: "-100px" }}
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Get In Touch</h2>
@@ -58,10 +58,10 @@ const Contact = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Contact Info */}
                     <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ once: true }}
+                        initial={{ opacity: 0, x: -100, scale: 0.9 }}
+                        whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        viewport={{ once: true, margin: "-50px" }}
                         className="space-y-8"
                     >
                         <h3 className="text-2xl font-bold mb-6 text-white text-left">Contact Information</h3>
@@ -105,10 +105,10 @@ const Contact = () => {
 
                     {/* Contact Form */}
                     <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ once: true }}
+                        initial={{ opacity: 0, x: 100, scale: 0.9 }}
+                        whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        viewport={{ once: true, margin: "-50px" }}
                         className="backdrop-blur-md p-8 rounded-2xl shadow-xl border border-white/10"
                     >
                         <h3 className="text-2xl font-bold mb-6 text-white">Send Me a Message</h3>

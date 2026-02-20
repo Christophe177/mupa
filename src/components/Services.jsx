@@ -46,10 +46,10 @@ const Services = () => {
         <section id="services" className="py-20 backdrop-blur-sm text-slate-100 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: true, margin: "-100px" }}
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-bold mb-4">My Services</h2>
@@ -63,10 +63,10 @@ const Services = () => {
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            viewport={{ once: true }}
+                            initial={{ opacity: 0, y: 80, scale: 0.9 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
+                            viewport={{ once: true, margin: "-50px" }}
                             className="backdrop-blur-md p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-white/10"
                         >
                             <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 ${service.color} transition-transform hover:scale-110`}>
