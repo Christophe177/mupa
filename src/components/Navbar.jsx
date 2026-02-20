@@ -26,9 +26,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed top-0 left-0 w-full z-[99999] transition-all duration-300 ${isScrolled ? 'bg-black/95 shadow-lg py-2' : 'bg-slate-950/90 md:bg-transparent py-4'}`}>
-            {/* Top Shadow for Contrast - always visible on mobile */}
-            <div className={`absolute inset-0 md:hidden bg-slate-950 pointer-events-none`} />
+        <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/95 shadow-lg py-2' : 'bg-black/30 md:bg-transparent py-4'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
@@ -51,7 +49,7 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <div className="md:hidden flex items-center relative z-10">
+                    <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="inline-flex items-center justify-center p-2 rounded-md text-cyan-400 hover:text-cyan-300 focus:outline-none"

@@ -47,20 +47,4 @@
       background-position: 0% 50%;
     }
   }
-
-  /* Failsafe Mobile UI Stacking & Fixed Positioning */
-  nav {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    z-index: 99999 !important;
-    width: 100% !important;
-  }
-
-  .floating-wa-btn {
-    position: fixed !important;
-    bottom: 1.5rem !important;
-    right: 1.5rem !important;
-    z-index: 99999 !important;
-  }
 }
