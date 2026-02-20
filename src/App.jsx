@@ -14,6 +14,7 @@ function App() {
   return (
     <div className="min-h-screen text-slate-800 dark:text-slate-100 font-sans">
       <Navbar />
+      <FloatingWhatsApp />
       <Hero />
       <main>
         <About />
@@ -24,7 +25,6 @@ function App() {
         <Contact />
       </main>
       <Footer />
-      <FloatingWhatsApp />
     </div>
   );
 }
