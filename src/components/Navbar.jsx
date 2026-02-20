@@ -26,9 +26,9 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed top-0 left-0 w-full z-[99999] transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-4'}`}>
-            {/* Top Shadow for Contrast */}
-            <div className={`absolute inset-0 md:hidden bg-gradient-to-b from-black/80 to-transparent pointer-events-none h-32 -top-0 transition-opacity duration-300 ${isScrolled ? 'opacity-0' : 'opacity-100'}`} />
+        <nav className={`fixed top-0 left-0 w-full z-[99999] transition-all duration-300 ${isScrolled ? 'bg-black/95 shadow-lg py-2' : 'bg-slate-950/90 md:bg-transparent py-4'}`}>
+            {/* Top Shadow for Contrast - always visible on mobile */}
+            <div className={`absolute inset-0 md:hidden bg-slate-950 pointer-events-none`} />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
