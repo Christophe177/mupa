@@ -13,7 +13,6 @@ import FloatingWhatsApp from './components/FloatingWhatsApp';
 function App() {
   return (
     <div className="min-h-screen text-slate-800 dark:text-slate-100 transition-colors duration-300 font-sans">
-      <Navbar />
       <Hero />
       <main>
         <About />
@@ -24,6 +23,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <Navbar />
       <FloatingWhatsApp />
     </div>
   );

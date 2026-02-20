@@ -26,9 +26,9 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-4'}`}>
-            {/* Contrast Shield for Mobile - ensures menu is visible on bright backgrounds */}
-            <div className={`absolute inset-0 md:hidden bg-gradient-to-b from-black/60 to-transparent pointer-events-none h-32 -top-0 transition-opacity duration-300 ${isScrolled ? 'opacity-0' : 'opacity-100'}`} />
+        <nav className={`fixed top-0 left-0 w-full z-[99999] transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-4'}`}>
+            {/* Top Shadow for Contrast */}
+            <div className={`absolute inset-0 md:hidden bg-gradient-to-b from-black/80 to-transparent pointer-events-none h-32 -top-0 transition-opacity duration-300 ${isScrolled ? 'opacity-0' : 'opacity-100'}`} />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
@@ -51,12 +51,12 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <div className="md:hidden flex items-center">
+                    <div className="md:hidden flex items-center relative z-10">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-200 hover:text-cyan-500 focus:outline-none"
+                            className="inline-flex items-center justify-center p-2 rounded-md text-cyan-400 hover:text-cyan-300 focus:outline-none"
                         >
-                            {isOpen ? <X size={24} /> : <Menu size={24} />}
+                            {isOpen ? <X size={28} /> : <Menu size={28} />}
                         </button>
                     </div>
                 </div>
