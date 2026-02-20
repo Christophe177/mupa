@@ -6,6 +6,10 @@ export default {
     ],
     theme: {
         extend: {
+            screens: {
+                'xs': '400px',
+                'tall': { 'raw': '(min-height: 700px)' },
+            },
             colors: {
                 primary: "#0f172a", // Dark slate
                 secondary: "#1e293b", // Slate 800

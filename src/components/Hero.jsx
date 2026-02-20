@@ -4,7 +4,7 @@ import { ArrowRight, Download } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section id="home" className="relative min-h-screen md:h-screen py-20 md:py-0 flex items-center justify-center overflow-hidden">
+        <section id="home" className="relative min-h-[100dvh] py-12 md:py-0 flex items-center justify-center overflow-hidden">
             {/* Background Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
@@ -16,7 +16,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-purple-500/10 z-20" />
             </div>
 
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white flex flex-col items-center justify-center gap-6 md:gap-0">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -68,12 +68,12 @@ const Hero = () => {
                 </motion.div>
             </div>
 
-            {/* Scroll indicator */}
+            {/* Scroll indicator - hidden on short screens to avoid overlap */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 1 }}
-                className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+                className="absolute bottom-10 left-1/2 transform -translate-x-1/2 hidden tall:block"
             >
                 <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-2">
                     <motion.div
