@@ -17,7 +17,16 @@
 }
 
 @layer base {
-  html {
+
+  html,
+  body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
   }
 
@@ -46,5 +55,16 @@
     100% {
       background-position: 0% 50%;
     }
+  }
+
+  /* Force Android Parity: Unbreakable Fixed Positioning */
+  nav,
+  a.fixed {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    pointer-events: auto !important;
   }
 }

@@ -27,7 +27,7 @@ const Navbar = () => {
     ];
 
     return createPortal(
-        <nav className={`fixed top-0 left-0 w-full z-[10000] ${isScrolled ? 'bg-black/95 shadow-lg py-2' : 'bg-black/80 md:bg-transparent py-4'}`}>
+        <nav className={`fixed top-0 left-0 right-0 z-[99999] ${isScrolled ? 'bg-black/95 shadow-lg py-2' : 'bg-black/95 md:bg-transparent py-4'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">

@@ -10,7 +10,7 @@ const Hero = () => {
                 <img
                     src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop&v=9"
                     alt="Professional Production Studio"
-                    className="w-full h-full object-cover scale-105 animate-slow-zoom brightness-125 contrast-110"
+                    className="w-full h-full object-cover brightness-125 contrast-110"
                 />
                 <div className="absolute inset-0 bg-slate-900/40 z-10" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-purple-500/10 z-20" />
