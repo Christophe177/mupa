@@ -18,12 +18,12 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'Home', href: '/#home' },
-        { name: 'About', href: '/#about' },
-        { name: 'Services', href: '/#services' },
-        { name: 'App', href: '/#app' },
-        { name: 'Projects', href: '/#projects' },
-        { name: 'Contact', href: '/#contact' },
+        { name: 'Home', href: '#home' },
+        { name: 'About', href: '#about' },
+        { name: 'Services', href: '#services' },
+        { name: 'Experience', href: '#activities' },
+        { name: 'Projects', href: '#projects' },
+        { name: 'Contact', href: '#contact' },
     ];
 
     return createPortal(
