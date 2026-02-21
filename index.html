@@ -14,26 +14,47 @@
   <script type="module" src="/src/main.jsx"></script>
   <!-- FORCE RELOAD VERSION: 2.22 (Final Fix) -->
   <script>
-    // Fail-Safe Jump Engine for Mobile Navigation
-    document.addEventListener('click', function (e) {
-      const target = e.target.closest('a');
-      if (target && target.hash && target.hash.startsWith('#')) {
-        const id = target.hash.substring(1);
-        const element = document.getElementById(id);
-        if (element) {
+    // MUPA Nav Engine v3.1 - Absolute Reliability Mode
+    (function () {
+      function performJump(e) {
+        const link = e.target.closest('a');
+        if (!link || !link.hash || !link.hash.startsWith('#')) return;
+
+        const targetId = link.hash.substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
           e.preventDefault();
-          const offset = 80;
-          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-          const offsetPosition = elementPosition - offset;
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-          // Close mobile menu if open
+          e.stopPropagation();
+
+          const offset = 90;
+          const top = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+
+          // Instant Jump - Best for mobile browsers
+          window.scrollTo({ top: top, behavior: 'auto' });
+
+          // Fallback jump if scrollTo fails
+          setTimeout(function () {
+            if (Math.abs(window.pageYOffset - (top)) > 10) {
+              window.scrollTo(0, top);
+            }
+          }, 50);
+
+          // Force close menu
           window.dispatchEvent(new CustomEvent('closeMobileMenu'));
+
+          // Silent URL update
+          history.pushState(null, null, link.hash);
         }
       }
-    }, true);
+
+      document.addEventListener('click', performJump, { capture: true, passive: false });
+      document.addEventListener('touchstart', function (e) {
+        if (e.target.closest('a')) {
+          // Just ensure it's interactive
+        }
+      }, { passive: true });
+    })();
   </script>
 </body>
 

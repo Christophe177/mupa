@@ -81,18 +81,10 @@ const Navbar = () => {
                                     key={link.name}
                                     href={link.href}
                                     className="text-gray-200 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium outline-none"
-                                    onClick={() => {
-                                        setTimeout(() => setIsOpen(false), 150);
-                                    }}
                                 >
                                     {link.name}
                                 </a>
                             ))}
-                        </div>
-                        <div className="px-5 pb-4 mt-2">
-                            <span className="text-[10px] uppercase tracking-widest text-cyan-500/50 font-bold">
-                                Version 2.2 (Final Fix)
-                            </span>
                         </div>
                     </motion.div>
                 )}
