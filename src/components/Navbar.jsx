@@ -12,7 +12,6 @@ const Navbar = () => {
             setIsScrolled(window.scrollY > 20);
         };
         window.addEventListener('scroll', handleScroll);
-        // Force dark mode
         document.documentElement.classList.add('dark');
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -26,31 +25,12 @@ const Navbar = () => {
         { name: 'Contact', href: '#contact' },
     ];
 
-    const scrollToSection = (e, href) => {
-        e.preventDefault();
-        const targetId = href.replace('#', '');
-        const element = document.getElementById(targetId);
-        if (element) {
-            const offset = 80; // height of navbar
-            const bodyRect = document.body.getBoundingClientRect().top;
-            const elementRect = element.getBoundingClientRect().top;
-            const elementPosition = elementRect - bodyRect;
-            const offsetPosition = elementPosition - offset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-            setIsOpen(false);
-        }
-    };
-
-    return createPortal(
-        <nav className={`fixed top-0 left-0 right-0 z-[99999] ${isScrolled ? 'bg-black/95 shadow-lg py-2' : 'bg-black/95 md:bg-transparent py-4'}`}>
+    return (
+        <nav className={`fixed top-0 left-0 right-0 z-[2147483647] ${isScrolled ? 'bg-black/95 shadow-lg py-2' : 'bg-black/95 md:bg-transparent py-4'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
-                        <a href="#home" onClick={(e) => scrollToSection(e, '#home')} className="text-lg xs:text-xl sm:text-2xl font-bold text-cyan-400 hover:opacity-80 transition-opacity whitespace-nowrap outline-none">
+                        <a href="#home" className="text-lg xs:text-xl sm:text-2xl font-bold text-cyan-400 hover:opacity-80 transition-opacity whitespace-nowrap outline-none">
                             MUHIRE Patrick
                         </a>
                     </div>
@@ -61,7 +41,6 @@ const Navbar = () => {
                                 <a
                                     key={link.name}
                                     href={link.href}
-                                    onClick={(e) => scrollToSection(e, link.href)}
                                     className="text-gray-200 hover:text-cyan-400 px-4 py-2 rounded-full text-base lg:text-lg font-semibold transition-all hover:bg-white/10 outline-none"
                                 >
                                     {link.name}
@@ -94,8 +73,10 @@ const Navbar = () => {
                                 <a
                                     key={link.name}
                                     href={link.href}
-                                    onClick={(e) => scrollToSection(e, link.href)}
                                     className="text-gray-200 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium outline-none"
+                                    onClick={() => {
+                                        setTimeout(() => setIsOpen(false), 150);
+                                    }}
                                 >
                                     {link.name}
                                 </a>
@@ -104,8 +85,7 @@ const Navbar = () => {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </nav>,
-        document.body
+        </nav>
     );
 };
 

@@ -18,7 +18,12 @@
 
 @layer base {
 
-  html,
+  html {
+    scroll-behavior: smooth !important;
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+  }
+
   body {
     overflow-x: hidden !important;
     max-width: 100% !important;

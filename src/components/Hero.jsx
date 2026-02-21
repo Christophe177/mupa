@@ -4,8 +4,8 @@ import { ArrowRight, Download } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section id="home" className="relative min-h-screen py-12 md:py-0 flex items-center justify-center overflow-hidden">
-            {/* Background Overlay */}
+        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+            {/* Dynamic Multimedia Wall Background Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
                     src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop&v=9"
