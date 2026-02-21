@@ -12,6 +12,29 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+  <!-- FORCE RELOAD VERSION: 2.22 (Final Fix) -->
+  <script>
+    // Fail-Safe Jump Engine for Mobile Navigation
+    document.addEventListener('click', function (e) {
+      const target = e.target.closest('a');
+      if (target && target.hash && target.hash.startsWith('#')) {
+        const id = target.hash.substring(1);
+        const element = document.getElementById(id);
+        if (element) {
+          e.preventDefault();
+          const offset = 80;
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = elementPosition - offset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+          // Close mobile menu if open
+          window.dispatchEvent(new CustomEvent('closeMobileMenu'));
+        }
+      }
+    }, true);
+  </script>
 </body>
 
 </html>

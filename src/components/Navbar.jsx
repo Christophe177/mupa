@@ -11,9 +11,16 @@ const Navbar = () => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
         };
+        const handleCloseMenu = () => setIsOpen(false);
+
         window.addEventListener('scroll', handleScroll);
+        window.addEventListener('closeMobileMenu', handleCloseMenu);
         document.documentElement.classList.add('dark');
-        return () => window.removeEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('closeMobileMenu', handleCloseMenu);
+        };
     }, []);
 
     const navLinks = [
@@ -81,6 +88,11 @@ const Navbar = () => {
                                     {link.name}
                                 </a>
                             ))}
+                        </div>
+                        <div className="px-5 pb-4 mt-2">
+                            <span className="text-[10px] uppercase tracking-widest text-cyan-500/50 font-bold">
+                                Version 2.2 (Final Fix)
+                            </span>
                         </div>
                     </motion.div>
                 )}
