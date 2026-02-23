@@ -45,9 +45,9 @@ const Hero = () => {
                         <span className="text-cyan-500">PATRICK</span>
                     </h1>
                     <p className="text-lg md:text-2xl text-gray-300 mb-6 md:mb-8 max-w-2xl mx-auto font-light">
-                        Creative Multimedia Specialist
+                        Multimedia Editor & Creative Design Specialist
                         <span className="block mt-2 text-lg text-gray-400">
-                            Photography • Videography • Graphic Design • Motion Graphics
+                            Photography • Videography • Graphic Design • Motion Graphics • Voiceovers • Sound Design
                         </span>
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">

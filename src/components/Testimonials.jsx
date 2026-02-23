@@ -6,27 +6,27 @@ const Testimonials = () => {
     const testimonials = [
         {
             id: 1,
-            name: 'Edubridge Rwanda',
-            role: 'Education & Technology Partner',
-            content: 'Patrick transformed our digital presence. His technical skills and creative eye helped us showcase our training programs effectively to the Rwandan youth.',
+            name: 'EduBridge Rwanda',
+            role: 'Marketing Manager',
+            content: 'As Marketing Manager at EduBridge Rwanda, Patrick transformed our digital presence and strengthened our brand visibility. Through strategic campaigns and compelling content, he effectively promoted our study, travel, work, and relocation services abroad building trust and meaningful engagement with aspiring Africans seeking international opportunities.',
             rating: 5,
             image: '/edubrige.png',
         },
         {
             id: 2,
             name: 'Marchal Real Estate',
-            role: 'Property & Development',
-            content: 'The promotional video Patrick created for our new estate development was stunning. It captured the luxury and comfort we wanted to convey perfectly.',
+            role: 'Digital Content Creator',
+            content: 'As the lead in charge of all visual content at Marchal Real Estate, Patrick elevated our brand presentation to a new level. From promotional videos to overall visual direction, his work consistently captured the luxury, comfort, and sophistication we wanted to convey.',
             rating: 5,
             image: '/marchal.png',
         },
         {
             id: 3,
-            name: 'NSHUTI Chris',
-            role: 'Creative Director',
-            content: 'A highly talented multimedia specialist. Patrick delivered our project on time and exceeded our expectations with his professional editing and photography.',
+            name: 'Isangano Radio 104.7FM',
+            role: 'Audio Production Specialist & Presenter',
+            content: 'At Isangano Radio 104.7FM, Patrick contributed as a Radio Presenter and Audio-Visual Content Creator. His engaging on-air presence, strong storytelling ability, and technical expertise in multimedia production significantly enhanced our programming quality and audience engagement.',
             rating: 5,
-            image: '/chris.png',
+            image: '/isangano radio.jpg',
         },
     ];
 

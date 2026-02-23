@@ -33,13 +33,21 @@ const About = () => {
                         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                         viewport={{ once: true, margin: "-50px" }}
                     >
-                        <h3 className="text-3xl font-bold mb-6">I'm a Multimedia Specialist</h3>
+                        <h3 className="text-3xl font-bold mb-6">Multimedia Editor & Creative Design Specialist</h3>
                         <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-                            With a passion for visual storytelling, I specialize in creating compelling digital content that engages audiences.
-                            My journey involves working with various brands to bring their vision to life through photography, videography, and dynamic motion graphics.
+                            Creative and detail-oriented Multimedia Editor with five years of professional experience in design
+                            related projects. Highly skilled in managing the complete design process from conceptualization and
+                            creative direction to final delivery ensuring quality, consistency, and impactful results.
+                        </p>
+                        <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+                            Proficient in videography, sound design, graphic design, photography, Voiceovers and motion-based
+                            visual storytelling. Advanced user of Adobe Creative Suite and Microsoft Office Suite, with strong
+                            technical and creative execution abilities.
                         </p>
                         <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                            I have 5 years of experience in the creative industry, constantly learning and adapting to new trends and technologies to deliver top-notch results.
+                            Versatile and adaptable, capable of contributing effectively to a wide range of design projects.
+                            Additionally, an experienced voice-over artist with the ability to deliver clear, engaging, and task
+                            oriented narration tailored to diverse project needs.
                         </p>
 
                         <motion.div
