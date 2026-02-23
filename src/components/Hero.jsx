@@ -8,9 +8,9 @@ const Hero = () => {
             {/* Dynamic Multimedia Wall Background Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop&v=9"
-                    alt="Professional Production Studio"
-                    className="w-full h-full object-cover brightness-125 contrast-110"
+                    src="/BACKGROUND IMAGE1-01.png"
+                    alt="MUHIRE Patrick Background"
+                    className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-slate-900/40 z-10" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-purple-500/10 z-20" />
