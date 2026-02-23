@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight, Download, Camera, Video, PenTool, MonitorPlay, Mic, Music } from 'lucide-react';
 
 const Hero = () => {
     return (
@@ -44,13 +44,33 @@ const Hero = () => {
                         <span className="text-white">MUHIRE </span>
                         <span className="text-cyan-500">PATRICK</span>
                     </h1>
-                    <p className="text-lg md:text-2xl text-gray-300 mb-6 md:mb-8 max-w-2xl mx-auto font-light">
-                        Multimedia Editor & Creative Design Specialist
-                        <span className="block mt-2 text-lg text-gray-400">
-                            Photography • Videography • Graphic Design • Motion Graphics • Voiceovers • Sound Design
-                        </span>
-                    </p>
-                    <div className="flex flex-col sm:flex-row justify-center gap-4">
+                    <div className="mb-8 max-w-3xl mx-auto">
+                        <p className="text-lg md:text-2xl text-gray-300 mb-6 font-light">
+                            Multimedia Editor & Creative Design Specialist
+                        </p>
+                        <div className="flex flex-wrap justify-center gap-3">
+                            {[
+                                { name: 'Photography', icon: <Camera size={18} /> },
+                                { name: 'Videography', icon: <Video size={18} /> },
+                                { name: 'Graphic Design', icon: <PenTool size={18} /> },
+                                { name: 'Motion Graphics', icon: <MonitorPlay size={18} /> },
+                                { name: 'Voiceovers', icon: <Mic size={18} /> },
+                                { name: 'Sound Design', icon: <Music size={18} /> },
+                            ].map((skill, index) => (
+                                <motion.div
+                                    key={skill.name}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.4 + (index * 0.1) }}
+                                    className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-md rounded-full border border-white/10 text-sm md:text-base font-medium text-gray-200 hover:bg-white/10 transition-colors"
+                                >
+                                    <span className="text-cyan-400">{skill.icon}</span>
+                                    {skill.name}
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
                         <a
                             href="/#projects"
                             className="group px-8 py-3 rounded-full bg-white text-black font-bold flex items-center justify-center transition-all hover:bg-gray-200 hover:scale-105 shadow-xl"
