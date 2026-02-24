@@ -4,7 +4,7 @@ import { ArrowRight, Download, Camera, Video, PenTool, MonitorPlay, Mic, Music }
 
 const Hero = () => {
     return (
-        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-32">
             {/* Dynamic Multimedia Wall Background Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
