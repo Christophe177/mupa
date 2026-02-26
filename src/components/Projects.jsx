@@ -60,14 +60,144 @@ const Projects = () => {
         },
         {
             id: 7,
-            title: 'Product Launch 3D Animation',
+            title: 'MUPA Logo Animation',
             category: 'Motion Graphics',
-            image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1364&q=80',
-            video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-            description: '3D motion graphics revealing features of a new smartwatch.',
-            tools: ['Blender', 'After Effects'],
+            image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
+            video: '/MUPA M LOGO ANIM.mp4',
+            description: 'A dynamic logo animation for MUPA, showcasing brand identity through motion.',
+            tools: ['After Effects', 'Illustrator'],
         },
-
+        {
+            id: 8,
+            title: 'EduBridge Intro/Outro',
+            category: 'Motion Graphics',
+            image: '/edulogo.jpg',
+            video: '/EDUBRIDGE INTRO AUTRO ANIMe.mp4',
+            description: 'Professional intro and outro animation for EduBridge educational content.',
+            tools: ['After Effects', 'Premiere Pro'],
+        },
+        {
+            id: 20,
+            title: 'Sports TV Show Opener',
+            category: 'Motion Graphics',
+            image: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
+            video: '/sports-opener.mp4',
+            description: 'High-energy sports television show opener created with Cinema 4D.',
+            tools: ['Cinema 4D', 'After Effects'],
+        },
+        {
+            id: 21,
+            title: 'Fashion Design Animation',
+            category: 'Motion Graphics',
+            image: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80',
+            video: '/fashion-animation.mp4',
+            description: 'Complex fashion animation project using C4D, Daz, Marvelous Designer, and iClone.',
+            tools: ['C4D', 'Marvelous Designer', 'iClone'],
+        },
+        {
+            id: 22,
+            title: 'Creative Photo Manipulation',
+            category: 'Graphic Design',
+            image: '/1photomanipulation.jpg',
+            description: 'Advanced photo manipulation blending multiple elements into a surreal landscape.',
+            tools: ['Photoshop'],
+        },
+        {
+            id: 23,
+            title: 'AfroVibe New Year 2025',
+            category: 'Graphic Design',
+            image: "/AFROVIBE NEW YEAR'S EVE 2025-01.png",
+            description: "Event poster design for AfroVibe's New Year's Eve celebration.",
+            tools: ['Photoshop', 'Illustrator'],
+        },
+        {
+            id: 24,
+            title: 'Audio Dramas Cover',
+            category: 'Graphic Design',
+            image: '/AUDIO DRAMAS-01.png',
+            description: 'Key art and cover design for an audio drama series.',
+            tools: ['Photoshop'],
+        },
+        {
+            id: 25,
+            title: 'Document AFP Logo',
+            category: 'Graphic Design',
+            image: '/Document AFP LOGO-01.jpg',
+            description: 'Identity design for Document AFP, focusing on clarity and heritage.',
+            tools: ['Illustrator'],
+        },
+        {
+            id: 26,
+            title: 'EduBridge Visual Identity',
+            category: 'Graphic Design',
+            image: '/EDUBRIDGE.png',
+            description: 'Comprehensive branding and visual identity for EduBridge.',
+            tools: ['Illustrator', 'Photoshop'],
+        },
+        {
+            id: 27,
+            title: 'Professional Logo Design',
+            category: 'Graphic Design',
+            image: '/FullLogo_NoBuffer.jpg',
+            description: 'Minimalist logo design focused on balance and geometric precision.',
+            tools: ['Illustrator'],
+        },
+        {
+            id: 28,
+            title: 'Fresh Hour Social Media',
+            category: 'Graphic Design',
+            image: '/Picture2.jpg',
+            description: 'Social media content design for the Fresh Hour brand.',
+            tools: ['Photoshop'],
+        },
+        {
+            id: 29,
+            title: 'Fresh Hour Campaign',
+            category: 'Graphic Design',
+            image: '/Picture3.jpg',
+            description: 'Promotional campaign visuals for Fresh Hour.',
+            tools: ['Photoshop'],
+        },
+        {
+            id: 30,
+            title: 'Fresh Hour Branding',
+            category: 'Graphic Design',
+            image: '/Picture4.jpg',
+            description: 'Brand identity development for Fresh Hour projects.',
+            tools: ['Photoshop', 'Illustrator'],
+        },
+        {
+            id: 31,
+            title: 'TM Logo Concept',
+            category: 'Graphic Design',
+            image: '/TM LOGO-01.png',
+            description: 'Creative logo concept and variations for the TM brand.',
+            tools: ['Illustrator'],
+        },
+        {
+            id: 32,
+            title: 'A Day with a Rwandan Painting Artist',
+            category: 'Videography',
+            image: '/painting-artist.png',
+            description: 'Behind the scenes and cinematic coverage of a local Rwandan artist at work.',
+            tools: ['Sony A7SIII', 'Gimbal'],
+        },
+        {
+            id: 33,
+            title: 'Videography Bootcamp',
+            category: 'Videography',
+            image: '/bootcamp.jpeg',
+            description: 'Instructional and documentary coverage of a professional videography training bootcamp.',
+            tools: ['Lumix S5II', 'Educational Media'],
+        },
+        {
+            id: 34,
+            title: 'The Recycler Documentary',
+            category: 'Videography',
+            image: '/recycler.png',
+            description: 'A documentary project focusing on environmental sustainability and recycling efforts.',
+            tools: ['Sony FX3', 'Drone Footage'],
+        },
         {
             id: 9,
             title: 'Portrait / Lifestyle',
@@ -252,16 +382,27 @@ const Projects = () => {
                         >
                             <div className="relative h-64 md:h-96 bg-black">
                                 {selectedProject.video ? (
-                                    <iframe
-                                        width="100%"
-                                        height="100%"
-                                        src={selectedProject.video}
-                                        title={selectedProject.title}
-                                        frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen
-                                        className="w-full h-full"
-                                    ></iframe>
+                                    selectedProject.video.includes('youtube.com') || selectedProject.video.includes('youtu.be') ? (
+                                        <iframe
+                                            width="100%"
+                                            height="100%"
+                                            src={selectedProject.video}
+                                            title={selectedProject.title}
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                            className="w-full h-full"
+                                        ></iframe>
+                                    ) : (
+                                        <video
+                                            controls
+                                            className="w-full h-full"
+                                            poster={selectedProject.image}
+                                        >
+                                            <source src={selectedProject.video} type="video/mp4" />
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    )
                                 ) : (
                                     <img
                                         src={selectedProject.image}

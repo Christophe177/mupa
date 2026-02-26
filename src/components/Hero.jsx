@@ -25,7 +25,7 @@ const Hero = () => {
                 >
                     <div className="relative w-32 h-32 xs:w-36 xs:h-36 sm:w-48 md:w-56 sm:h-48 md:h-56 rounded-full p-1 bg-gradient-to-tr from-cyan-400 to-blue-600 shadow-2xl">
                         <img
-                            src="/patrick-profile.jpg"
+                            src="/mupa-profile.jpeg"
                             alt="MUHIRE Patrick"
                             className="w-full h-full object-cover rounded-full border-4 border-slate-900"
                         />

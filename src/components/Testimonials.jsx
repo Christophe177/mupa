@@ -10,7 +10,7 @@ const Testimonials = () => {
             role: 'Marketing Manager',
             content: 'As Marketing Manager at EduBridge Rwanda, Patrick transformed our digital presence and strengthened our brand visibility. Through strategic campaigns and compelling content, he effectively promoted our study, travel, work, and relocation services abroad building trust and meaningful engagement with aspiring Africans seeking international opportunities.',
             rating: 5,
-            image: '/edubrige.png',
+            image: '/edulogo.jpg',
         },
         {
             id: 2,
